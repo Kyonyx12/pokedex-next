@@ -1,6 +1,7 @@
-import Head from "next/head";
 import Link from "next/link";
 import Pokecard from "../components/pokecard/Pokecard";
+import Search from "../components/search/Search";
+
 import { getAllPokemons } from "../helpers/api-util";
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 import { GiPokecog } from "react-icons/gi";
@@ -34,9 +35,7 @@ export default function Page({ pokemons, page }) {
         <Link href="/" className={classes.titleTextLink}>
           <a className={classes.a}>
             <div className={classes.title}>
-              <h1 className="title-text">Pokedex</h1>
-
-              <GiPokecog className={classes.pokedex} color="#FFFFFF" />
+              <h1 className={classes.titleText}>Pokedex</h1>
             </div>
           </a>
         </Link>
@@ -49,6 +48,7 @@ export default function Page({ pokemons, page }) {
           </a>
         </Link>
       </div>
+      <Search />
       <div className="container">
         {pokemons.map((pokemon) => (
           <Pokecard

@@ -81,11 +81,7 @@ function Pokemon({ pokemon }) {
               <p>{type.toLowerCase()}</p>
             </div>
             {pokemon.types[1] && (
-              <div
-                className={`typeBackground ${
-                  pokemon.types[1].type.name === "poison" ? "poison" : "flying"
-                }`}
-              >
+              <div className={`typeBackground ${pokemon.types[1].type.name}`}>
                 <p>{pokemon.types[1].type.name}</p>
               </div>
             )}

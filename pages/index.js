@@ -4,7 +4,7 @@ import { getAllPokemons } from "../helpers/api-util";
 import classes from "../styles/Home.module.css";
 
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
-import { GiPokecog } from "react-icons/gi";
+
 import Search from "../components/search/Search";
 
 export default function Home({ pokemons }) {
@@ -22,9 +22,7 @@ export default function Home({ pokemons }) {
         <Link href="/" className={classes.titleTextLink}>
           <a className={classes.a}>
             <div className={classes.title}>
-              <h1 className="title-text">Pokedex</h1>
-
-              <GiPokecog className={classes.pokedex} color="#FFFFFF" />
+              <h1 className={classes.titleText}>Pokedex</h1>
             </div>
           </a>
         </Link>
