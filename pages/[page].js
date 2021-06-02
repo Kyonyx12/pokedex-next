@@ -2,17 +2,28 @@ import Head from "next/head";
 import Link from "next/link";
 import Pokecard from "../components/pokecard/Pokecard";
 import { getAllPokemons } from "../helpers/api-util";
-import classes from "../styles/Home.module.css";
-
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 import { GiPokecog } from "react-icons/gi";
-import Search from "../components/search/Search";
 
-export default function Home({ pokemons }) {
+import classes from "../styles/Home.module.css";
+
+export default function Page({ pokemons, page }) {
+  let pag = Number(page);
+  let prevPage;
+  let nextPage = pag + 1;
+
+  if (pag === 2) {
+    prevPage = "";
+  } else {
+    prevPage = pag - 1;
+  }
+  if (pag === 31) {
+    nextPage = "";
+  }
   return (
     <div className="App">
       <div className={classes.prevNext}>
-        <Link href={`/`}>
+        <Link href={`/${prevPage.toString()}`}>
           <a>
             <IoArrowBackCircle
               color="#FFFFFF99"
@@ -29,7 +40,7 @@ export default function Home({ pokemons }) {
             </div>
           </a>
         </Link>
-        <Link href={`/2`}>
+        <Link href={`/${nextPage.toString()}`}>
           <a>
             <IoArrowForwardCircle
               color="#FFFFFF99"
@@ -38,7 +49,6 @@ export default function Home({ pokemons }) {
           </a>
         </Link>
       </div>
-      <Search />
       <div className="container">
         {pokemons.map((pokemon) => (
           <Pokecard
@@ -55,12 +65,18 @@ export default function Home({ pokemons }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const pokemons = await getAllPokemons("https://pokeapi.co/api/v2/pokemon/");
-
-  return {
-    props: {
-      pokemons,
-    },
-  };
+export const getServerSideProps = async (context) => {
+  const page = context.params.page;
+  if (context.params.page === "2") {
+    const pokemons = await getAllPokemons(
+      "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
+    );
+    return { props: { pokemons, page } };
+  } else {
+    const id = context.params.page * 2 + "0";
+    const pokemons = await getAllPokemons(
+      `https://pokeapi.co/api/v2/pokemon/?offset=${id}&limit=20`
+    );
+    return { props: { pokemons, page } };
+  }
 };

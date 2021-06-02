@@ -1,16 +1,363 @@
-html,
-body {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  font-family: "Zen Dots", cursive;
 }
 
-a {
-  color: inherit;
+.App {
+  height: 100%;
+  width: 100%;
+
+  letter-spacing: 1px;
+  background-color: #36bed9;
+  color: rgb(75, 76, 77);
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.loading {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #36bed9;
+  color: white;
+}
+
+.title-text {
+  text-align: center;
+  padding: 0.25rem;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+.title-loading {
+  padding: 0.25rem;
+  font-size: 2.5rem;
+  color: rgb(75, 76, 77);
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+@media (max-width: 422px) {
+  .title-text {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 380px) {
+  .title-text {
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+/**/
+
+.articleGRASS {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #71c558 50%, white 50%);
+}
+.articleFIRE {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #ea7a3c 50%, white 50%);
+}
+.articleWATER {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #539ae2 50%, white 50%);
+}
+.articleBUG {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #94bc4a 50%, white 50%);
+}
+.articleNORMAL {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #aab09f 50%, white 50%);
+}
+.articleELECTRIC {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #e5c531 50%, white 50%);
+}
+.articlePOISON {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #b468b7 50%, white 50%);
+}
+.articleGROUND {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #cc9f4f 50%, white 50%);
+}
+.articleFAIRY {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #e397d1 50%, white 50%);
+}
+
+.articleFIGHTING {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #cb5f48 50%, white 50%);
+}
+.articlePSYCHIC {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #e5709b 50%, white 50%);
+}
+.articleROCK {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #b2a061 50%, white 50%);
+}
+.articleSTEEL {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #89a1b0 50%, white 50%);
+}
+.articleICE {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #70cbd4 50%, white 50%);
+}
+.articleGHOST {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #846ab6 50%, white 50%);
+}
+.articleFLYING {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #7da6de 50%, white 50%);
+}
+.articleDARK {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #736c75 50%, white 50%);
+}
+
+.articleDRAGON {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #6a7baf 50%, white 50%);
+}
+
+/**/
+.typeBackground {
+  padding: 0.25rem;
+  margin: 0.1rem;
+  text-align: center;
+  height: 20px;
+  width: 76px;
+  background-color: inherit;
+  border: solid 2px white;
+  border-radius: 20px;
+}
+.typeGRASS {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #71c558;
+}
+.typeFIRE {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #ea7a3c;
+}
+.typeWATER {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #539ae2;
+}
+.typeBUG {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #94bc4a;
+}
+.typeNORMAL {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #aab09f;
+}
+.typeELECTRIC {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #e5c531;
+}
+.typePOISON {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #b468b7;
+}
+.typeGROUND {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #cc9f4f;
+}
+.typeFAIRY {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #e397d1;
+}
+.typeFIGHTING {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #cb5f48;
+}
+.typePSYCHIC {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #e5709b;
+}
+.typeROCK {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #b2a061;
+}
+.typeSTEEL {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #89a1b0;
+}
+.typeICE {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #70cbd4;
+}
+.typeGHOST {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #846ab6;
+}
+.typeFLYING {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #7da6de;
+}
+.typeDARK {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #736c75;
+}
+.typeDRAGON {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 50vh;
+  border-radius: 0 0 80px 0;
+  width: 100%;
+  background-color: #6a7baf;
+}
+
+/**/
+.hidden {
+  display: none;
+}
+
+.default {
+  margin-top: 0.5rem;
+  background-color: white;
+  display: flex;
+  text-align: center;
+}
+.moves {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 70vw;
+}
+.active {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  height: 64px;
+  width: 64px;
+  border: 2px solid rgb(75, 76, 77, 50%);
+  border-radius: inherit;
+  box-shadow: 0 6px 10px 0 rgb(75, 76, 77, 80%);
+}
+
+/**/
+.poison {
+  background-color: purple;
+}
+.flying {
+  background-color: grey;
 }

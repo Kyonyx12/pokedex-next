@@ -1,0 +1,232 @@
+.singleContainer {
+  width: 100%;
+  color: white;
+}
+.titleButton {
+  padding: 0.25rem;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+.title {
+  padding: 0.15rem;
+  margin-top: 0.25rem;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 10px 0 #ffffff;
+  border: 3px solid #ffffff99;
+  border-radius: 40px;
+  margin-bottom: 3rem;
+  transition: 0.25s;
+}
+.title:hover {
+  transform: scale(1.05);
+}
+.titleTextLink {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.pokedex {
+  display: none;
+  height: 60px;
+  width: 60px;
+  transition: 0.25s;
+}
+.pokedex:hover {
+  transform: scale(1.1);
+}
+.prevNext {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+}
+.a {
+  text-decoration: none;
+}
+.info {
+  text-align: center;
+  margin: auto;
+  margin-top: -3rem;
+}
+.h1 {
+  text-transform: capitalize;
+}
+.moreInfo {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  height: 80px;
+  border-radius: 40px;
+  box-shadow: rgb(0 0 0 / 8%) 4px 4px 8px, rgb(255 255 255 / 8%) -4px -4px 8px;
+  color: rgb(75, 76, 77);
+}
+.moreInfoBelow {
+  color: rgb(75, 76, 77);
+}
+.imgContainer {
+  margin-top: 4px;
+  height: 220px;
+  width: 220px;
+}
+.singleImg {
+  height: inherit;
+  width: inherit;
+}
+
+.type {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-transform: capitalize;
+  position: absolute;
+  top: 12rem;
+  right: 1rem;
+}
+
+.secondBackground {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: 50vh;
+  color: rgb(75, 76, 77);
+  background-color: white;
+  border-radius: 80px 0 0 0;
+}
+.iconBackground {
+  margin: 2rem;
+  padding: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  background-color: inherit;
+  transition: 0.25s;
+}
+.iconBackground:hover {
+  transform: scale(1.1);
+  background-color: #ffffff50;
+}
+
+.pokeIconBackground {
+  transition: 0.1s;
+  box-shadow: rgb(0 0 0 / 18%) 4px 4px 8px, rgb(255 255 255 / 8%) -4px -4px 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to top, white 50%, #ff3f3f 50%);
+
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+.eggIconBackground {
+  transition: 0.1s;
+  box-shadow: rgb(0 0 0 / 18%) 4px 4px 8px, rgb(255 255 255 / 8%) -4px -4px 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffcf7f;
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+.flashIconBackground {
+  transition: 0.1s;
+  box-shadow: rgb(0 0 0 / 18%) 4px 4px 8px, rgb(255 255 255 / 8%) -4px -4px 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f9ff7f;
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+
+.pokeIconBackground:hover {
+  background: linear-gradient(to top, white 50%, #ff0000 50%);
+  transform: scale(1.1);
+}
+.eggIconBackground:hover {
+  background-color: #ff9e0099;
+  transform: scale(1.1);
+}
+.flashIconBackground:hover {
+  background-color: #f3ff00;
+  transform: scale(1.1);
+}
+
+@media (max-width: 580px) {
+  .active {
+    text-align: center;
+    box-shadow: 0 2px 6px 0 rgb(75, 76, 77, 80%);
+    align-items: center;
+    height: 60px;
+    width: 60px;
+  }
+  .title {
+    box-shadow: 0 1px 10px 0 #ffffff;
+    text-align: center;
+    margin-top: 0.25rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .titleButton {
+    display: none;
+  }
+  .pokedex {
+    display: inline-block;
+
+    margin-bottom: 1rem;
+  }
+  .type {
+    top: 10rem;
+    right: 0.2rem;
+  }
+  .typeBackground {
+    width: 76px;
+  }
+  .pokeIconBackground {
+    width: 50px;
+    height: 50px;
+    padding: 0.6rem;
+    margin: 0.25rem;
+  }
+  .eggIconBackground {
+    width: 50px;
+    height: 50px;
+    padding: 0.6rem;
+    margin: 0.25rem;
+  }
+  .flashIconBackground {
+    width: 50px;
+    height: 50px;
+    padding: 0.6rem;
+    margin: 0.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .imgContainer {
+    margin-right: 5rem;
+    height: 180px;
+    width: 180px;
+  }
+
+  .iconBackground {
+    margin: 1rem;
+
+    width: 50px;
+    height: 50px;
+  }
+}
