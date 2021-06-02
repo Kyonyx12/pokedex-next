@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import Pokecard from "../components/pokecard/Pokecard";
 import { getAllPokemons } from "../helpers/api-util";
