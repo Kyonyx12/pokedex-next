@@ -1,4 +1,5 @@
 import classes from "./PokemonSection.module.css";
+
 export default function PokemonStats({ pokemon }) {
   return (
     <section>

@@ -1,4 +1,3 @@
-import React from "react";
 import Pokemon from "../../components/pokemon/Pokemon";
 import { getAllPokemons, getSinglePokemon } from "../../helpers/api-util";
 
@@ -24,9 +23,10 @@ export async function getStaticPaths() {
   const pokemons = await getAllPokemons("https://pokeapi.co/api/v2/pokemon/");
 
   const paths = pokemons.map((pokemon) => {
+    const id = pokemon.id.toString();
     return {
       params: {
-        id: pokemon.id.toString(),
+        id,
       },
     };
   });

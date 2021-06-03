@@ -1,9 +1,10 @@
 import Link from "next/link";
+
+import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 import Pokecard from "../components/pokecard/Pokecard";
 import Search from "../components/search/Search";
 
 import { getAllPokemons } from "../helpers/api-util";
-import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 
 import classes from "../styles/Home.module.css";
 

@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import { useRouter } from "next/router";
 import { CgPokemon } from "react-icons/cg";
+
 import classes from "./Search.module.css";
 
 export default function Search() {
@@ -20,12 +22,11 @@ export default function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTyping(!typing);
-
     setIsLoading(true);
   };
 
   useEffect(() => {
-    const petition = async (url) => {
+    const request = async (url) => {
       const data = await fetch(url);
       setSearch("");
       if (data.ok) {
@@ -37,10 +38,12 @@ export default function Search() {
         return;
       }
     };
+
     if (search === "") {
       return;
     }
-    petition(`https://pokeapi.co/api/v2/pokemon/${search}`);
+
+    request(`https://pokeapi.co/api/v2/pokemon/${search}`);
   }, [typing]);
 
   return (

@@ -1,4 +1,5 @@
 import classes from "./PokemonSection.module.css";
+
 export default function PokemonMoves({ pokemon }) {
   return (
     <section className={classes.moves}>

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import {
   IoArrowForwardCircle,
@@ -12,8 +14,7 @@ import { BsEgg } from "react-icons/bs";
 import PokemonDefault from "./PokemonInfo/PokemonDefault";
 import PokemonMoves from "./PokemonInfo/PokemonMoves";
 import PokemonStats from "./PokemonInfo/PokemonStats";
-import Image from "next/image";
-import Link from "next/link";
+
 import classes from "./Pokemon.module.css";
 
 function Pokemon({ pokemon }) {
