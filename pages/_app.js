@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Pokedex - w/ NextJS</title>
-        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
     </>

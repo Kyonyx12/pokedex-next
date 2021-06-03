@@ -4,7 +4,6 @@ import Search from "../components/search/Search";
 
 import { getAllPokemons } from "../helpers/api-util";
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
-import { GiPokecog } from "react-icons/gi";
 
 import classes from "../styles/Home.module.css";
 
@@ -67,6 +66,7 @@ export default function Page({ pokemons, page }) {
 
 export const getServerSideProps = async (context) => {
   const page = context.params.page;
+
   if (context.params.page === "2") {
     const pokemons = await getAllPokemons(
       "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
