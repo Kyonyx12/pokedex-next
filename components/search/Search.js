@@ -15,12 +15,14 @@ export default function Search() {
 
   const handleChange = (e) => {
     const typed = e.target.value;
-
     setSearch(typed);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (search === "") {
+      setIsValid(false);
+    }
     setTyping(!typing);
     setIsLoading(true);
   };
@@ -51,13 +53,17 @@ export default function Search() {
       <form className={classes.form} onSubmit={handleSubmit}>
         <input
           id="search"
-          type="search"
+          type="text"
           className={classes.input}
           value={search}
           onChange={handleChange}
         />
         <span>
-          <CgPokemon size="3rem" className={classes.searchIcon} />
+          <CgPokemon
+            size="3rem"
+            className={classes.searchIcon}
+            onClick={handleSubmit}
+          />
         </span>
       </form>
       {!isValid && (

@@ -7,7 +7,6 @@
 
 .input {
   position: relative;
-  height: 42px;
   width: 40%;
   left: 23px;
   border-radius: 30px;
@@ -15,14 +14,18 @@
   box-shadow: 0 3px 5px 0 rgb(75, 76, 77, 80%);
 
   outline: none;
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   color: inherit;
 }
 
 .searchIcon {
   position: relative;
   left: -28px;
-  bottom: 3px;
+  transition: ease 0.25s;
+  cursor: pointer;
+}
+.searchIcon:hover {
+  transform: scale(1.1);
 }
 
 .notValid {
